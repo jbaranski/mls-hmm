@@ -104,7 +104,7 @@ W               L               T
 0.15050167      0.36789298      0.48160535
 ```
 
-To finalize the prediction, I take the max of the following:
+To finalize the prediction, take the max of the following:
 1. Sum home team `W` posterior probability with away team `L` posterior probability, divide by 2
 ```
 = (.56016598 + .36789298) / 2
