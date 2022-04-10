@@ -79,3 +79,46 @@ The probabilities of a hidden state based on the observation
 Here is a Markov Chain visualization (based on the given hidden state transition matrix and observation transition matrix) of DC United's historical results.
 
 ![DCUNITED-MARKOV-CHAIN](https://user-images.githubusercontent.com/10889950/162631461-3a734d2a-c1e4-4b74-824c-767527cc2b99.png)
+
+
+### Prediction probabilities
+We input whether a single item sequence (whether the next game is home or away). The output is the posterior probability for each hidden state in the model.
+
+Here are the following posterior probabilities for each hidden state based on the fact that DC United's next game is at home:
+
+`W` = Win, `L` = Loss, `T` = Tie
+
+```
+W               L               T
+0.56016598      0.29045643      0.14937759
+```
+
+This can be interpreted as a `56%` probability of winning, `29%` chance of losing, and `14%` chance of tieing.
+
+Now we repeat this process for DC United's opponent, Austin FC (they have their own hidden state transition matrix, observation transition matrix, etc... based on their input csv data). Here are the following posterior probabilities for each hidden state based on the fact that Austin FC's next game is NOT at home:
+
+`W` = Win, `L` = Loss, `T` = Tie
+
+```
+W               L               T
+0.15050167      0.36789298      0.48160535
+```
+
+To finalize the prediction, I take the max of the following:
+1. Sum home team `W` posterior probability with away team `L` posterior probability, divide by 2
+```
+= (.56016598 + .36789298) / 2
+= 0.46402948
+```
+2. Sum away team `W` posterior probability with home team `L` posterior probability, divide by 2
+```
+= (.15050167 + .29045643) / 2
+= 0.22047905
+```
+3. Sum home and away team `T` posterior probability, divide by 2
+```
+= (0.14937759 + .48160535) / 2
+= 0.31549147
+```
+
+So as you can see, there is a 46% chance DC United will win their next home game, a 22% chance DC United lose their next home game, and a 31% chance DC United tie their next home game.
