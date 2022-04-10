@@ -16,8 +16,9 @@ The input csv contains the following columns:
 
 The dataset only goes back to the 2021 season to keep the results relevant (since player transfers, coaching changes, etc... affect results).
 
-## Example, DC United entire 2021 season, 2022 season up to 04/10/2022, 40 games
-The result data was obtained from https://www.mlssoccer.com/standings/form-guide/.
+## Example
+DC United entire 2021 season, and 2022 season up to 04/10/2022, 40 games total in the data set. The result data was obtained from https://www.mlssoccer.com/standings/form-guide/.
+
 ### States
 The states below represent the counts of 39 transitions from 40 games. The last game doesn't have a transition yet so not included in the states count (this missing transition is what we're going to predict).
 
@@ -75,7 +76,6 @@ The probabilities of a hidden state based on the observation
 ```
 
 ### Markov Chain Visualization
-Here is a Markov Chain visualization based on the given hidden state transition matrix and observation transition matrix.
+Here is a Markov Chain visualization (based on the given hidden state transition matrix and observation transition matrix) of DC United's historical results.
 
 ![DCUNITED-MARKOV-CHAIN](https://user-images.githubusercontent.com/10889950/162631461-3a734d2a-c1e4-4b74-824c-767527cc2b99.png)
-### Calculations by hand match the model output
