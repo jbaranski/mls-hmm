@@ -82,7 +82,7 @@ Here is a Markov Chain visualization (based on the given hidden state transition
 
 
 ### Prediction probabilities
-We input whether a single item sequence (whether the next game is home or away). The output is the posterior probability for each hidden state in the model.
+We input a single item sequence (whether the next game is home or away). The output is the posterior probability for each hidden state in the model.
 
 Here are the following posterior probabilities for each hidden state based on the fact that DC United's next game is at home:
 
@@ -122,3 +122,16 @@ To finalize the prediction, I take the max of the following:
 ```
 
 So as you can see, there is a 46% chance DC United will win their next home game, a 22% chance DC United lose their next home game, and a 31% chance DC United tie their next home game.
+
+### Predicition results on 4/10/2022
+The model heavily favors home teams, and I need to tweak it with more observations to make it more reliable. With that said, it was a pretty good predictor of results for this round of games:
+
+```
+Game                          Prediction            Actual Result      Correct
+Orlando vs. Chicago           Orlando W 41%         Orlando W          Yes
+Miami vs. New England         Miami W 37%           Miami W            Yes
+LA Galaxy vs. LAFC            LA Galaxy W 40%       LA Galaxy W        Yes
+Kansas City vs. Nashville     Kansas City W 46%     Kansas City L      No
+Charlotte vs. Atlanta         Charlotte W 59%       Charlotte W        Yes
+Austin FC vs. Minnesota       Austin W 48%          Austin
+```
