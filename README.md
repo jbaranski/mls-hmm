@@ -93,7 +93,7 @@ W               L               T
 0.56016598      0.29045643      0.14937759
 ```
 
-This can be interpreted as a `56%` probability of winning, `29%` chance of losing, and `14%` chance of tieing.
+This can be interpreted as a `56%` chance of winning, `29%` chance of losing, and `14%` chance of tieing.
 
 Now we repeat this process for DC United's opponent, Austin FC (they have their own hidden state transition matrix, observation transition matrix, etc... based on their input csv data). Here are the following posterior probabilities for each hidden state based on the fact that Austin FC's next game is NOT at home:
 
@@ -121,7 +121,7 @@ To finalize the prediction, I take the max of the following:
 = 0.31549147
 ```
 
-So as you can see, there is a 46% chance DC United will win their next home game, a 22% chance DC United lose their next home game, and a 31% chance DC United tie their next home game.
+So as you can see, there is a `46%` chance DC United will win their next home game, a `22%` chance DC United lose their next home game, and a `31%` chance DC United tie their next home game (want to note these values will always sum to 100, or in this specific case 99 due to lackadaisical rounding on my part).
 
 ### Prediction results on 4/10/2022
 The model heavily favors home teams, and I need to add more observation variables to make it more reliable. With that said, it was a pretty good predictor of results for this round of games as is:
