@@ -124,7 +124,7 @@ To finalize the prediction, I take the max of the following:
 So as you can see, there is a 46% chance DC United will win their next home game, a 22% chance DC United lose their next home game, and a 31% chance DC United tie their next home game.
 
 ### Prediction results on 4/10/2022
-The model heavily favors home teams, and I need to tweak it with more observations to make it more reliable. With that said, it was a pretty good predictor of results for this round of games:
+The model heavily favors home teams, and I need to add more observation variables to make it more reliable. With that said, it was a pretty good predictor of results for this round of games as is:
 
 ```
 Game                          Prediction            Actual Result      Correct
