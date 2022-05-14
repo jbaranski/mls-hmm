@@ -133,5 +133,5 @@ Miami vs. New England         Miami W 37%           Miami W            Yes
 LA Galaxy vs. LAFC            LA Galaxy W 40%       LA Galaxy W        Yes
 Kansas City vs. Nashville     Kansas City W 46%     Kansas City L      No
 Charlotte vs. Atlanta         Charlotte W 59%       Charlotte W        Yes
-Austin FC vs. Minnesota       Austin W 48%          Austin
+Austin FC vs. Minnesota       Austin W 48%          Austin             Yes
 ```
